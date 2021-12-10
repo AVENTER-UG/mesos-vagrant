@@ -1,0 +1,33 @@
+---
+
+ansible_python_interpreter: /usr/bin/python2
+
+
+ansible_ssh_user: "vagrant"
+ansible_ssh_port: "22"
+ansible_connection: "ssh"
+
+become: True
+become_user: root
+become_method: sudo
+
+
+dns_domain: "test.local"
+
+weave_password: "Sahph2eechua7aih5aiR4euvooluom"
+weavescope_enable: false 
+dns1: "8.8.8.8"
+dns2: "8.8.8.4"
+mesos_clustername: "TEST"
+mesos_password: "woowuHohboozahb6owee4ahyah3ief"
+marathon_basic_auth: "marathon:Aipo8weeW1uchai5see9eedei0ziez"
+quorum: "1"
+
+zookeeper_admin_secret: "aoSeizapho3tuze2ecoLive5zie4ey"
+zookeeper_client_secret: "aoSeizapho3tuze2ecoLive5zie4ey"
+
+libprocess_enable_ssl: "false"
+
+
+
+

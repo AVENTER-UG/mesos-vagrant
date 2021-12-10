@@ -1,0 +1,6 @@
+marathon_username: "marathon"
+marathon_password: "Aipo8weeW1uchai5see9eedei0ziez"
+marathon_hostname: "{{ marathon_username }}:{{ marathon_password }}@localhost"
+marathon_servers: ["http://localhost:8080"]
+marathon_port: "8080"
+

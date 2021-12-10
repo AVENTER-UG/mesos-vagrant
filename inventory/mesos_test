@@ -1,0 +1,15 @@
+[all_servers]
+master-01   client_address=192.168.56.51      eth_ip4=192.168.56.51   eth_if=eth1
+node-01     client_address=192.168.56.101     eth_ip4=192.168.56.101  eth_if=eth1   docker=true
+node-02     client_address=192.168.56.102     eth_ip4=192.168.56.102  eth_if=eth1   docker=true
+
+[worker]
+node-01
+node-02
+
+[manager]
+master-01 myid=0
+
+[marathon]
+master-01
+
