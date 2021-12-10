@@ -38,9 +38,6 @@ You can access the mesos ui via: http://192.168.56.51:5050
 
 ## Done
 
-
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" title="Mesos Development
-Umgebung mit Vagrant" src="https://peertube.aventer.biz/videos/embed/cc306313-4a5e-4c10-befa-04138290b1f4"
-frameborder="0" allowfullscreen></iframe>
+[Watch the Demo](https://peertube.aventer.biz/videos/embed/cc306313-4a5e-4c10-befa-04138290b1f4)
 
 
