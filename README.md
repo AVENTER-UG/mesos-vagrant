@@ -25,7 +25,8 @@ These step will install a whole Mesos stack. The ansible inventory files
 you fill find in the inventory directory of mesos-vagrant.
 
 ```
-cd ../
+exec ssh-add ansible_id_rsa
+cd ../../
 git clone https://github.com/AVENTER-UG/ansible-mesos-stack
 cd ansible-mesos-stack
 ansible-playbook -i ../mesos-vagrant/inventory/mesos_test plays/server-config.yaml
