@@ -1,7 +1,7 @@
 [all_servers]
-master-01   client_address=192.168.56.51   
-node-01     client_address=192.168.56.101  
-node-02     client_address=192.168.56.102  
+master-01   client_address=192.168.57.51    eth_ip4=192.168.57.51   eth_if=enp0s8   
+node-01     client_address=192.168.57.101   eth_ip4=192.168.57.101  eth_if=enp0s8 docker=true mesos_attributes="os:debian11;level:10;"
+node-02     client_address=192.168.57.102   eth_ip4=192.168.57.102  eth_if=enp0s8 docker=true 
 
 [worker]
 node-01
@@ -11,5 +11,4 @@ node-02
 master-01 myid=0
 
 [marathon]
-master-01
 

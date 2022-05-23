@@ -1,18 +1,22 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$node_instances = 2
+$node_instances = 1
 $node_prefix = "node"
 $master_instances = 1
 $master_prefix = "master"
 
 Vagrant.configure("2") do |config|
+  config.vbguest.auto_update = false        
+      
   (1..$node_instances).each do |x|
     config.vm.define vm_name = "%s-%02d" % [$node_prefix, x] do |config|
       config.vm.box_download_insecure = true
-      config.vm.box = "centos/7"
-      config.vm.network "private_network", ip: "192.168.56.#{x+100}"
-      config.vm.hostname = vm_name
+      config.vm.box = "debian/bullseye64"
+#      config.vm.box = "ubuntu/focal64"
+#      config.vm.box = "centos/7"
+      config.vm.network "private_network", ip: "192.168.57.#{x+100}"
+      config.vm.hostname = vm_name + ".local"
       config.vm.provision "shell", path: "provision.sh"
       config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id, "--memory", "6000"]
@@ -21,10 +25,13 @@ Vagrant.configure("2") do |config|
   end
   (1..$master_instances).each do |x|
     config.vm.define vm_name = "%s-%02d" % [$master_prefix, x] do |config|
+      config.vbguest.auto_update = false        
       config.vm.box_download_insecure = true
-      config.vm.box = "centos/7"
-      config.vm.network "private_network", ip: "192.168.56.#{x+50}"
-      config.vm.hostname = vm_name
+      config.vm.box = "debian/bullseye64"
+#      config.vm.box = "ubuntu/focal64"
+#      config.vm.box = "centos/7"
+      config.vm.network "private_network", ip: "192.168.57.#{x+50}"
+      config.vm.hostname = vm_name + ".local"
       config.vm.provision "shell", path: "provision.sh"
       config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id, "--memory", "2048"]

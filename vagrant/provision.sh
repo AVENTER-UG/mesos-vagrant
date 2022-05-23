@@ -40,7 +40,7 @@ chmod 644 "$dir/ansible.id_rsa.pub"
 chown -R vagrant: "$dir"
 
 echo "$public"         >> "$dir/authorized_keys"
-echo -ne "$hosts"      >>  /etc/hosts
+sed -i "/$(hostname)/d" /etc/hosts
 
 yum install -y wget
 wget https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-x86_64 -O /usr/local/bin/docker-compose
