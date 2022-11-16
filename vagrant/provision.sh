@@ -27,7 +27,7 @@ gPPiZ5k5gGYPZvbIUeFULRko6DiD3u8BUyYjQeLXlDm0N+SuHpycmgs5f/m0D+Rz
 iDYRUDEFSyYzRTRs8UNZACIwJGR9g8XTFVZBNmNi7oThzR0K+C+OfNY=
 -----END RSA PRIVATE KEY-----"
 public="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHlQeSX7ewZClemUhODxceefR8vNBviJsSXeMHh15LlIvA80rbSkReXz4ozGqgt1vuBQr2czmnM+N6eNp4bGTPKtEXCSxVufn+0zYd1mMDsY/rKAOFQDGSS8onK+BKQnj1smHg4jzRsq1QQbA1OfS71Kt4zeWPok8myVK6pCtn7CVNii5FNhx2bIc3HUcGR8HooUIvWq9NsEi+VjnIc8yFxpHqFfG+O9RznxcXvm4QKHNDuqA/i/gJjewzhKCg/IcU2GH+ymVovuCXtdNxDX7hFl6mdQGn0qIchxdNLUBLgfl68j9k37CNagoq/BfS7cD4J53hSqGwjuQWuMHtFzZ ansible"
-hosts="192.168.56.51\tmaster-01\n192.168.56.101\tnode-01\n192.168.56.102\tnode-02\n192.168.56.103\tnode-03\n"
+hosts="192.168.57.51\tmaster-01\n192.168.57.101\tnode-01\n192.168.57.102\tnode-02\n192.168.57.103\tnode-03\n"
 ssh_conf="Host node-*\n\tIdentityFile ~/.ssh/ansible.id_rsa\n\tStrictHostKeyChecking=no\n\tUserKnownHostsFile=/dev/null\n"
 dir="/home/vagrant/.ssh"
 
@@ -41,10 +41,12 @@ chown -R vagrant: "$dir"
 
 echo "$public"         >> "$dir/authorized_keys"
 sed -i "/$(hostname)/d" /etc/hosts
+echo -e "$hosts" >> /etc/hosts
 
-yum install -y wget
-wget https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-x86_64 -O /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+#yum install -y wget
+#wget https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-x86_64 -O /usr/local/bin/docker-compose
+#chmod +x /usr/local/bin/docker-compose
+
 
 
 sed -ie 's/^#MaxAuthTries.*/MaxAuthTries 100/g' /etc/ssh/sshd_config
