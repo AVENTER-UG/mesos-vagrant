@@ -13,7 +13,6 @@ PROJDIR = "${toString ./.}";
 shellHook = ''
   cd vagrant
   vagrant plugin repair
+  vagrant up --provider=libvirt
   '';
 }  
-
-
