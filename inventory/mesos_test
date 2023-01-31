@@ -1,19 +1,14 @@
 [all_servers]
-master-01   client_address=192.168.57.51    eth_ip4=192.168.57.51   eth_if=enp0s8 docker=true swarm=true  ufw=true
-node-01     client_address=192.168.57.101   eth_ip4=192.168.57.101  eth_if=enp0s8 docker=true swarm=true  mesos_attributes="os:ubuntu;level:10;" ufw=true
-node-02     client_address=192.168.57.102   eth_ip4=192.168.57.102  eth_if=enp0s8 docker=true swarm=true ufw=true
-
+mesos-master-01   eth_if=eth1 
+mesos-node-01     eth_if=eth1 docker=true mesos_attributes="os:ubuntu;"
 
 [worker]
-node-01
-node-02
+mesos-node-01
 
 [manager]
-master-01
+mesos-master-01
 
 [zookeeper]
-master-01 myid=0
-node-01 myid=1
-node-02 myid=2
+mesos-master-01 myid=0
 
 

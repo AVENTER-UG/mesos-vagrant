@@ -27,7 +27,7 @@ gPPiZ5k5gGYPZvbIUeFULRko6DiD3u8BUyYjQeLXlDm0N+SuHpycmgs5f/m0D+Rz
 iDYRUDEFSyYzRTRs8UNZACIwJGR9g8XTFVZBNmNi7oThzR0K+C+OfNY=
 -----END RSA PRIVATE KEY-----"
 public="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHlQeSX7ewZClemUhODxceefR8vNBviJsSXeMHh15LlIvA80rbSkReXz4ozGqgt1vuBQr2czmnM+N6eNp4bGTPKtEXCSxVufn+0zYd1mMDsY/rKAOFQDGSS8onK+BKQnj1smHg4jzRsq1QQbA1OfS71Kt4zeWPok8myVK6pCtn7CVNii5FNhx2bIc3HUcGR8HooUIvWq9NsEi+VjnIc8yFxpHqFfG+O9RznxcXvm4QKHNDuqA/i/gJjewzhKCg/IcU2GH+ymVovuCXtdNxDX7hFl6mdQGn0qIchxdNLUBLgfl68j9k37CNagoq/BfS7cD4J53hSqGwjuQWuMHtFzZ ansible"
-hosts="192.168.57.51\tmaster-01\n192.168.57.101\tnode-01\n192.168.57.102\tnode-02\n192.168.57.103\tnode-03\n"
+hosts="10.17.0.5\tmesos-master-01\n10.17.0.11\tmesos-node-01\n10.17.0.12\tmesos-node-02\n10.17.0.13\tmesos-node-03\n"
 ssh_conf="Host node-*\n\tIdentityFile ~/.ssh/ansible.id_rsa\n\tStrictHostKeyChecking=no\n\tUserKnownHostsFile=/dev/null\n"
 dir="/home/vagrant/.ssh"
 
