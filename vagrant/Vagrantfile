@@ -1,9 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$node_instances =  1
+$node_instances = 3
 $node_prefix = "mesos-node"
-$master_instances = 1
+$master_instances = 0
 $master_prefix = "mesos-master"
 
 Vagrant.configure("2") do |config|

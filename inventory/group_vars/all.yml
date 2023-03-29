@@ -28,7 +28,21 @@ zookeeper_client_secret: "aoSeizapho3tuze2ecoLive5zie4ey"
 
 libprocess_enable_ssl: "true"
 
-mesos_docker_config_enable: true
-mesos_docker_config_json: '{ "auths": { "https://index.docker.io/v1/": { "auth": ""  } } }'
+mesos_docker_config_enable: false
+mesos_enable_systemd: "false"
+mesos_containerizer_list: 
+  - docker
+
+druid_segmentcache_locations: "/data/segment-cache"  
+druid_indexer_task_baseTaskDir: "/data/indexer-task"  
+druid_indexer_task_hadoopWorkingPath: "/data/hadoop-tmp"
+druid_lookup_snapshotWorkingDir: "/data/lookup-config"  
+druid_jvm_io_tmpdir: "/data/lookup-ram"
+druid_jvm_io_tmpdir_tmpfs: true
+druid_jvm_io_tmpdir_tmpfs_size: "10M"
+druid_log_dir: "/data/logs"  
+druid_middlemanager_jvm_io_tmpdir: "/data/middlemanager-tmp"
+  
+    
 
 

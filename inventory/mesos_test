@@ -1,6 +1,6 @@
 [all_servers]
 mesos-master-01   eth_if=eth1 
-mesos-node-01     eth_if=eth1 docker=true mesos_attributes="os:ubuntu;"
+mesos-node-01   eth_if=eth1 
 
 [worker]
 mesos-node-01

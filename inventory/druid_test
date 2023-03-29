@@ -1,0 +1,18 @@
+[druid:children]
+druid-master
+druid-data
+druid-query
+
+[druid-master]
+mesos-master-01
+
+[druid-query]
+mesos-node-01
+
+[druid-data]
+mesos-node-02
+
+[zookeeper]
+mesos-master-01 myid=0
+
+
